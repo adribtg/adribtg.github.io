@@ -1,30 +1,81 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>MUS'IA : Reconnaissance de genre musical</title>
-	<link rel="stylesheet" type="text/css" href="musia.css">
-</head>
-<body>
-	<header>
-		<h1>MUS'IA : Reconnaissance de genre musical</h1>
-	</header>
-	<main>
-		<section>
-			<h2>Introduction</h2>
-			<p>Le genre musical est un ensemble de morceaux de musique, de formes musicales possédant plusieurs caractéristiques communes. Notre objectif est de développer un modèle d'intelligence artificielle capable de reconnaître le genre d'une musique.</p>
-		</section>
-		<section>
-			<h2>Notre approche</h2>
-			<p>Nous allons entraîner un réseau de neurones à reconnaître les caractéristiques des différents genres musicaux, en utilisant une grande base de données de morceaux de musique de différents genres. Nous allons ensuite tester la précision de notre modèle en lui faisant écouter des morceaux qu'il n'a jamais entendus auparavant.</p>
-		</section>
-		<section>
-			<h2>Exemple de morceau</h2>
-			<img src="./images/morceau.jpg" alt="Morceau de musique">
-			<p>Notre projet a fait l'objet d'une intervention lors du west data festival, ainsi qu'une mention dans le journal Ouest France https://www.ouest-france.fr/pays-de-la-loire/laval-53000/en-mayenne-1-500-inscrits-a-la-5e-edition-du-west-data-festival-05479b70-c291-11ed-88ce-5eefbb0a1a52</p>
-		</section>
-	</main>
-	<footer>
-		<p>Projet par BARRIER Enzo, BETTINGER Adrien, LEBLANC Mathieu, RABOUAN Amaury</p>
-	</footer>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUS'IA</title>
+    <link rel="stylesheet" href="musia.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="navigation">
+        <ul>
+          <li><a href="../../index.html"> &lt; Retour au porte-folio</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <section class="project" id="project">
+        <div class="title">
+          <h2 class="main-title">
+            MUS'IA
+            <img class="logo" src="./images/logo_musia.png" alt="Logo" />
+          </h2>
+          <h2 class="subtitle">
+            Détecter le genre d'une musique grâce au machine learning
+          </h2>
+        </div>
+        <div class="content">
+          <h2 class="content-title">Introduction</h2>
+          <p class="paragraph">
+            Le genre musical est un ensemble de morceaux de musique, de formes
+            musicales possédant plusieurs caractéristiques communes. Notre
+            objectif est de développer un modèle de machine learning capable de
+            reconnaître les genres d’une musique, et d’attribuer pour chaque
+            genre, un pourcentage d’appartenance. Notre projet permet ainsi de
+            connaître quels sont les mouvements musicaux, quelles inspirations
+            ont influencé l’auteur de la musique lors de son écriture. De plus,
+            connaître les genres d’une musique est une base solide pour
+            construire un algorithme de recommandation.
+          </p>
+          <!-- <div class="image-prj">
+            <img src="./images/app.png" alt="Description de l'image">
+          </div>           -->
+          <h2 class="content-title">Constitution de la base de données</h2>
+          <p class="paragraph">
+            Pour avons décidé de construire nous même la base de données, car cela nous
+            permettait de bien connaitre la composition du dataset, de choisir nous même
+            les genres à inclure dans notre modèle. Nous avons utilisé des plateformes de 
+            streaming telles que Youtube et Shazam.
+          </p>
+          <h2 class="content-title">Une implémentation de l'algorithme Random Forest de zéro</h2>
+          <p class="paragraph">
+            Pour avons décidé de construire nous même la base données, car cela nous
+            permettait de bien connaitre la composition du dataset, de choisir nous même
+            les genres à inclure dans notre modèle.
+          </p>
+          <h2 class="content-title">Présentation et communication autour du projet</h2>
+          <p class=""paragraph>
+            Ce projet à fait l'objet de plusieurs présentation, notamment au 
+            <a href="https://www.westdatafestival.fr/">West 
+              Data Festival</a>, et à même fait l'objet d'une mention dans 
+            <a href="https://www.ouest-france.fr/pays-de-la-loire/laval-53000/en-mayenne-1-500-inscrits-a-la-5e-edition-du-west-data-festival-05479b70-c291-11ed-88ce-5eefbb0a1a52">un article
+              du journal Ouest France.</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <script src="script.js" charset="utf-8"></script>
+  </body>
 </html>
