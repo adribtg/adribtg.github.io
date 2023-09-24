@@ -44,23 +44,6 @@ section{
   height: 70px; 
   margin-left: 10px;
 }
-
-.image-prj {
-  max-width: 100%;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.legend{
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.image-prj img {
-  max-width: 60%;
-  height: auto;
-}
-
 /* FIN A MODIFIER */
 .main .content{
   max-width: 800px;
