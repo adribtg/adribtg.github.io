@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tama Internship</title>
+    <title>Geospotter</title>
     <link rel="stylesheet" href="geospotter.css" />
     <link
       rel="stylesheet"
@@ -27,33 +27,57 @@
         <div class="title">
           <h2 class="main-title">
             Geospotter
-            <img class="logo" src="./geospotter.png" alt="Logo" />
+            <img class="logo" src="./images/logo.png" alt="Logo" />
           </h2>
           <h2 class="subtitle">
-            Outil GEOINT pour la géolocalisation à partir d’images
+            Outil de géolocalisation d'images à partir de segmentation
           </h2>
         </div>
         <div class="content">
           <h2 class="content-title">Introduction</h2>
           <p class="paragraph">
             Le IMINT/GEOINT (IMagery INTelligence/GEOspatial INTelligence) est
-            une sous-branche de l’OSINT qui consiste en la collecte et l’analyse
+            une sous-branche de l'OSINT qui consiste en la collecte et l'analyse
             de données géographiques à partir de sources publiques en ligne.
             Cette discipline est couramment utilisé pour lutter contre la
-            désinformation et a déjà permis dans le passé d’aider à faire
+            désinformation et a déjà permis dans le passé d'aider à faire
             avancer des enquêtes comme celle du crash du vol MH17 de Malaysia
-            Airlines. L’objectif de ce projet serait de créer un outil
-            permettant d’identifier la zone, la région où une photo a été prise
-            en analysant les éléments présents dans l’image, ainsi que les
-            caractéristiques géographiques du lieu photographié. L’idée serait
-            d’aider à réduire au maximum le champs de recherche géospatial des
+            Airlines. L'objectif de ce projet serait de créer un outil
+            permettant d'identifier la zone, la région où une photo a été prise
+            en analysant les éléments présents dans l'image, ainsi que les
+            caractéristiques géographiques du lieu photographié. L'idée serait
+            d'aider à réduire au maximum le champs de recherche géospatial des
             analystes.
           </p>
-          <h2 class="subtitle">
-            La construction de cette page n'est pas terminée, merci de revenir plus tard.
-          </h2>
+          <h2 class="content-title">Architecture du projet</h2>
+          <div class="image-prj2">
+            <img src="./images/architecture.png">
+          </div>          
+            <h2 class="content-title">Base de données de panoramas et segmentation</h2>
+            <p class="paragraph">
+              Nous avons récupérés près de 1.8 millions d'images sur des sites proposant des panoramas de
+              streetview, ce qui nous permet d'avoir une bonne couverture de celui-ci. Les images ont été 
+              téléchargées avec une résolution de 2048x1024. Pour la segmentation, nous avons utilisé Mask2Former,
+              un modèle de segmentation d'images introduit en 2022 par Meta AI Research. Cela nous permet 
+              de distinguer sur chaque image plusieurs d'éléments nous permettant de discriminer géographiquement 
+              un lieu. Nous pouvons détecter jusqu'a 65 classes différentes. Chaque classe est ensuite isolée puis
+              passé dans un classifieur. Ensuite, les résultats sont affichés sur une carte pour déterminer la 
+              répartition géographique de chaque classe.
+            </p>
+            <div class="image-prj3">
+              <img src="./images/segmentation.png">
+            </div>
+            <h2 class="content-title">Résultats et suite du projet</h2>
+            <p class="paragraph">
+              Ce projet rentre dans le cadre de ma formation, avec 6 mois pour effectuer un rendu, dont 8 semaines 
+              consacrées à ce projet ainsi que beaucoup de temps personnel. Un POC à base d'auto-encodeurs a été effectué,
+              qui fonctionne que très partiellement. De plus, une avancée fulgurante a été faite sur ce thème pendant la
+              conduite de ce projet, et en lisant les thèses de recherche associé, nous avons constaté que notre approche
+              n'était pas optimale. Nous avons donc décidé de laisser ce projet en suspend pour le moment. 
+            </p>
         </div>
       </section>
+      <div class="bande-noire"> <p class="auteur">Projet par BETTINGER Adrien, FABRE Valentin et LEBLANC Mathieu</p></div>
     </main>
 
     <!-- FOOTER -->
